@@ -14,9 +14,9 @@ public class Customer {
     public String firstName;
     public String lastName;
 
-    public Customer() {}        //Wymagane do dzialania repa
+    public Customer() {}
 
-    public Customer(String firstName, String lastName){
+    public Customer(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
