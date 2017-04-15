@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<div th:include="fragments/header" />
+<div th:include="fragments/navbar" />
+
+<div class="container">
+
+    <div class="row content">
+
+        <!--START SIDE NAV-->
+        <div class="col-sm-3 sidenav">
+
+            <h3>Panel</h3>
+            <form accept-charset="UTF-8" role="form" action="#login" id="login-form" method="post">
+                <div class="input-group">
+                    <span class="input-group-addon">@</span>
+                    <input id="email" type="text" class="form-control" name="email" placeholder="Email" />
+                </div>
+                <div class="form-group input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input id="password" type="password" class="form-control" name="password" placeholder="Password" />
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success btn-block">
+                        Login
+                    </button>
+                    <p class="help-block">
+                        <a class="pull-right text-muted" href="#" id="olvidado"><small>Don't have an account yet?</small></a>
+                    </p>
+                </div>
+            </form>
+            <br />
+        </div>
+        <!--END SIDE NAV-->
+
+        <!--START CONTENT-->
+        <div class="col-sm-9">
+            <h2>Sign up</h2>
+            <hr />
+
+            <form accept-charset="UTF-8" role="form" action="#register" id="register-form" method="post" class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-offset-3  col-sm-2" for="name">Name:</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control" id="name" placeholder="Enter name" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-offset-3  col-sm-2" for="surname">Surname:</label>
+                    <div class="col-sm-4">
+                        <input type="surname" class="form-control" id="surname" placeholder="Enter surname" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-offset-3  col-sm-2" for="email">Email:</label>
+                    <div class="col-sm-4">
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-offset-3 col-sm-2" for="password">Password:</label>
+                    <div class="col-sm-4">
+                        <input type="password" class="form-control" id="password" placeholder="Enter password" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-5 col-sm-7">
+                        <button type="submit" class="btn btn-success">Register</button>
+                    </div>
+                </div>
+            </form>
+
+            <hr />
+
+        </div>
+        <!--END CONTENT-->
+
+    </div>
+</div>
+
+<div th:include="fragments/footer" />
+
+</body>
+</html>

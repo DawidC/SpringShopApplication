@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<div th:include="fragments/header" />
+<div th:include="fragments/navbar" />
+
+<div class="container">
+
+    <div th:if="${param.logout}" class="alert alert-success">
+        <p>You've logged out</p>
+    </div>
+
+    <div th:if="${param.error}" class="alert alert-danger">
+        <p>Username or password is incorrect</p>
+    </div>
+
+    <div class="row content">
+
+        <!--START SIDE NAV-->
+        <div class="col-sm-3 sidenav">
+
+
+        </div>
+        <!--END SIDE NAV-->
+
+        <!--START CONTENT-->
+        <div class="col-sm-9">
+            <h2>Sign in</h2>
+            <hr />
+
+            <form accept-charset="UTF-8" role="form" th:action="@{/login}" id="login-form" method="post" class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-offset-3  col-sm-2" for="email">Email:</label>
+                    <div class="col-sm-4">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-offset-3 col-sm-2" for="password">Password:</label>
+                    <div class="col-sm-4">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-5 col-sm-7">
+                        <button type="submit" class="btn btn-success">Login</button>
+                    </div>
+                    <p class="help-block">
+                        <a class="pull-right text-muted" th:href="@{/register}" id="olvidado"><small>Don't have an account yet?</small></a>
+                    </p>
+                </div>
+            </form>
+
+            <hr />
+
+        </div>
+        <!--END CONTENT-->
+
+    </div>
+</div>
+
+<div th:include="fragments/footer" />
+
+</body>
+</html>

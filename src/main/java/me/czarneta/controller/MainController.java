@@ -16,10 +16,20 @@ public class MainController {
         return "main";
     }
 
-    @RequestMapping("/{name}")
+    @RequestMapping("/hello/{name}")
     public String getMainPageWithName(@PathVariable String name, Model model) {
         model.addAttribute("name", name);
         return "main";
+    }
+
+    @RequestMapping("/register")
+    public String getRegisterPage(){
+        return "register";
+    }
+
+    @RequestMapping("/login")
+    public String getLoginPage(){
+        return "login";
     }
 
 
